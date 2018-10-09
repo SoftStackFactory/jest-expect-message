@@ -19,7 +19,7 @@ const wrapMatcher = (matcher, customMessage) => {
       }
 
       const { matcherResult } = error;
-      const message = () => 'Custom message:\n  ' + customMessage + '\n\n' + matcherResult.message();
+      const message = () => 'Custom message:\n  ' + customMessage;
 
       throw new JestAssertionError({ ...matcherResult, message }, newMatcher);
     }
